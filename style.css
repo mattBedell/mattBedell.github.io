@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.backGroundDiv {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("assets/lakeMist.jpg");
+  background-size: 100% 100%;
+  position: fixed;
+  z-index: -10;
+}
+.card {
+  width: 75px;
+  height: 75px;
+  background-color: rgb(70,87,101);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleText {
+  color: rgb(230, 230, 230);
+  font-size: 1.5em;
+}
