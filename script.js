@@ -68,4 +68,5 @@ const aniLib = {
     }, 10)
   }
 }
-aniLib.fade(aCard, 0);
+//aniLib.fade(aCard, 0);
+aCard.style.opacity = 0;
