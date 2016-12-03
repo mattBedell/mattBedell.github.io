@@ -1,0 +1,34 @@
+* {
+  border: 1px dotted black;
+}
+body {
+  background-color: rgb(253,243,231);
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nameBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 45vw;
+}
+.title-show {
+  color: rgb(59,55,56);
+  display: inline;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.titleSeperator {
+  color: rgb(198,61,15);
+  font-weight: bold;
+  font-size: 2em;
+}
+.navBox {
+  background-color: rgb(126,143,124);
+  width: 42vw;
+  height: 4vh;
+}
