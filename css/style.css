@@ -77,7 +77,7 @@ body {
   width: 2%;
   height: 100%;
   background-color: red;
-  transition: opacity .2s;
+  transition: opacity 1s;
 }
 .pane-fade {
   opacity: 0;
