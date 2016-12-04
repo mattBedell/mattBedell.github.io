@@ -72,6 +72,8 @@ body {
   width: 100vw;
   display: flex;
   height: 60vh;
+  z-index: -1;
+  position: absolute;
 }
 .pane {
   width: .5%;
@@ -82,3 +84,64 @@ body {
 .pane-fade {
   opacity: 0;
 }
+.contentContainer {
+  width: 100vw;
+  display: flex;
+  height: 60vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.aboutContainer {
+  height: 100%;
+  width: 55vw;
+  border: 1px dotted black;
+  display: flex;
+  justify-content: space-between;
+
+}
+.aboutMain {
+  width: 55%;
+  background-color: red;
+  padding: 0 10px 0 10px;
+}
+.aboutAside {
+  background-color: blue;
+  width: 25%;
+  height: 100%;
+}
+.aboutHeader {
+  display: flex;
+  align-items: center;
+}
+.aboutHeader img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+.aboutHeader h4 {
+  display: inline;
+}
+.aboutMain  p {
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

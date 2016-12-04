@@ -4,8 +4,8 @@ $(() => {
     //$('.navBox').removeClass('navBox-fade');
   //})
   $('.navBox').removeClass('navBox-fade');
-  popPanes();
-  fadePanes(20, 90, 110, 180);
+  //popPanes();
+  fadePanes(0, 110, 110, 200);
 })
 function popPanes() {
   let $paneContainer = $('<div class="paneContainer"></div>');
@@ -48,7 +48,7 @@ function fadePanes(start, end, start2, end2) {
   })
 }
 function removePaneListeners() {
-  for(let i = 0; i < 50; i++) {
+  for(let i = 0; i < 200; i++) {
     $(`.pane${i}`).off();
   }
 }
