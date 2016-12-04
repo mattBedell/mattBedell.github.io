@@ -1,10 +1,9 @@
-* {
-  border: 1px dotted black;
-}
+
 body {
   background-color: rgb(253,243,231);
 }
 .titleBox {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,22 +12,73 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
-  width: 45vw;
+  flex-wrap: wrap;
+}
+.nameTitle {
+  transition: opacity 2s;
+}
+.jobTitle {
+  transition: opacity 2s;
+  transition-delay: 1s;
+}
+.title-fade {
+  opacity: 0;
+  transition: opacity 1s;
 }
 .title-show {
   color: rgb(59,55,56);
   display: inline;
   font-size: 1.5em;
   font-weight: bold;
+  margin: 0;
 }
 .titleSeperator {
   color: rgb(198,61,15);
   font-weight: bold;
   font-size: 2em;
+  transition: opacity 1s;
+  transition-delay: .5s;
 }
 .navBox {
-  background-color: rgb(126,143,124);
-  width: 42vw;
-  height: 4vh;
+  margin-top: 10px;
+  background-color: rgb(198,61,15);
+  width: 64%;
+  display: flex;
+  justify-content: space-around;
+  padding: 3px 0 3px 0;
+  align-items: center;
+  transition: opacity 2s;
+  transition-delay: 2s;
+}
+.navBox-fade {
+  opacity: 0;
+}
+.navButton {
+  display: inline;
+  margin: 0;
+  font-size: 1.1em;
+  color: rgb(253,243,231);
+}
+.navButton:hover {
+  cursor: pointer;
+  color: rgb(233, 223, 213);
+}
+.navSeperator {
+  margin: 0;
+  color: rgb(253,243,231);
+}
+.paneContainer {
+  width: 100vw;
+  display: flex;
+  height: 60vh;
+  background-color: gray;
+}
+.pane {
+  width: 2%;
+  height: 100%;
+  background-color: red;
+  transition: opacity .2s;
+}
+.pane-fade {
+  opacity: 0;
 }
