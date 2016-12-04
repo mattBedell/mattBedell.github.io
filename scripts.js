@@ -5,11 +5,11 @@ $(() => {
   //})
   $('.navBox').removeClass('navBox-fade');
   popPanes();
-  fadePanes(0, 50);
+  fadePanes(20, 90, 110, 180);
 })
 function popPanes() {
   let $paneContainer = $('<div class="paneContainer"></div>');
-  for(let i = 0; i < 50; i++) {
+  for(let i = 0; i < 200; i++) {
     let $pane = $(`<div class="pane pane${i} pane-fade"></div>`)
     $($paneContainer).append($pane);
   }
@@ -30,10 +30,15 @@ function popPanes() {
 //   $(`.pane${start}`).focus();
 //   $(`.pane${start}`).removeClass('pane-fade')
 // }
-function fadePanes(start, end) {
+function fadePanes(start, end, start2, end2) {
   for(let i = start; i < end; i++) {
     $(`.pane${i}`).focus();
-    $(`.pane${i}`).css('transition-delay', `${(i - start) * .008}s`);
+    $(`.pane${i}`).css('transition-delay', `${(i - start) * .004}s`);
+    $(`.pane${i}`).removeClass('pane-fade');
+  }
+  for(let i = start2; i < end2; i++) {
+    $(`.pane${i}`).focus();
+    $(`.pane${i}`).css('transition-delay', `${(i - start) * .004}s`);
     $(`.pane${i}`).removeClass('pane-fade');
   }
   let contentFadePoint = Math.floor((end-start) / 2);

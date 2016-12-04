@@ -19,7 +19,7 @@ body {
 }
 .jobTitle {
   transition: opacity 2s;
-  transition-delay: 1s;
+  transition-delay: .5s;
 }
 .title-fade {
   opacity: 0;
@@ -47,8 +47,9 @@ body {
   justify-content: space-around;
   padding: 3px 0 3px 0;
   align-items: center;
-  transition: opacity 2s;
-  transition-delay: 2s;
+  transition: opacity 1s;
+  transition-delay: 1s;
+  margin-bottom: 15px;
 }
 .navBox-fade {
   opacity: 0;
@@ -71,12 +72,11 @@ body {
   width: 100vw;
   display: flex;
   height: 60vh;
-  background-color: gray;
 }
 .pane {
-  width: 2%;
+  width: .5%;
   height: 100%;
-  background-color: red;
+  background-color: rgb(198,61,15);
   transition: opacity 1s;
 }
 .pane-fade {
