@@ -91,6 +91,7 @@ body {
   display: flex;
   margin-right: 20px;
   margin-bottom: 20px;
+  transition: opacity 1s;
 }
 .project-detail {
   height: 150px;
@@ -106,6 +107,9 @@ body {
 }
 .project-pacman h3{
   font-family: 'Press Start 2P', cursive;
+}
+.project-fade {
+  opacity: 0;
 }
 
 
