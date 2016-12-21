@@ -68,65 +68,42 @@ body {
   margin: 0;
   color: rgb(253,243,231);
 }
-.paneContainer {
-  width: 100vw;
-  display: flex;
-  height: 60vh;
-  z-index: -1;
-  position: absolute;
-}
-.pane {
-  width: .5%;
-  height: 100%;
-  background-color: rgb(198,61,15);
-  transition: opacity 1s;
-}
-.pane-fade {
-  opacity: 0;
-}
 .contentContainer {
   width: 100vw;
   display: flex;
-  height: 60vh;
-  position: absolute;
-  display: flex;
   justify-content: center;
 }
-.aboutContainer {
-  height: 100%;
-  width: 55vw;
-  border: 1px dotted black;
-  display: flex;
-  justify-content: space-between;
 
+/* CONTENT */
+
+/*Project - Pacman*/
+.projectsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.aboutMain {
-  width: 55%;
-  background-color: red;
-  padding: 0 10px 0 10px;
+.project img {
+  height: 150px;
+  width: 150px;
+  margin-right: 5px;
 }
-.aboutAside {
+.project {
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.project-detail {
+  height: 150px;
+  width: 300px;
   background-color: blue;
-  width: 25%;
-  height: 100%;
 }
-.aboutHeader {
-  display: flex;
-  align-items: center;
+.project-detail h3 {
+  text-align: center;
+  margin: 4px 0 1px 0;
 }
-.aboutHeader img {
-  width: 35px;
-  height: 35px;
-  margin-right: 10px;
+.project-detail p {
+  margin: 0 4px 0 4px;
 }
-.aboutHeader h4 {
-  display: inline;
-}
-.aboutMain  p {
-  margin-left: 10px;
-}
-
-
 
 
 
