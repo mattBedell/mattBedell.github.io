@@ -104,6 +104,9 @@ body {
 .project-detail p {
   margin: 0 4px 0 4px;
 }
+.project-pacman h3{
+  font-family: 'Press Start 2P', cursive;
+}
 
 
 
