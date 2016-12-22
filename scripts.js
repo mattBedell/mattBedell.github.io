@@ -1,44 +1,25 @@
 class UIController {
   constructor(componentsToRegister) {
     //this.components = {}
-    this.registerComponents(componentsToRegister)
+    this.components = componentsToRegister; // register all components to controller
     this.navSelect = 'project'
     this.registerNavClickEvents()
   }
-  // register all components to controller
-  registerComponents(componentsObj) {
-    // for(let componentType in componentsObj) {
-    //   this.components[componentType] = Object.assign({}, componentsObj[componentType])
-    // }
-    this.components = componentsObj;
-
-  }
-  // Click handler, sets currently selected navButton, hides all other content
+  // Updates controller to currently selected navButton, hides all other content
   focusSelect(navComponent) {
-    let fadeCounter = 0;
+    let fadeCounter = 5;
     this.components.content.forEach((item) => {
       if(item.type === navComponent.name) {
-        item.fadeIn(fadeCounter/10);
         fadeCounter++;
+        item.fadeIn(1, fadeCounter/20);
       } else if(item.type === this.navSelect) {
-        item.fadeOut(0);
+        item.fadeOut(.5, 0);
       }
     })
-    //this.components[]
-    // Inform controller of currently clicked navButton
-    // For all other content, hide it
-    // for(let content in this.components[navSelect])
-    //   this.components[navSelect]
     this.navSelect = navComponent.name
-    console.log(this.navSelect);
   }
+  // Add click events to nav buttons
   registerNavClickEvents() {
-    // for(let navItem in this.components.nav) {
-    //   this.components.nav[navItem].elmnt.on('click', () => {
-    //     this.focusSelect(this.components.nav[navItem])
-    //     console.log(this.navSelect);
-    //   })
-    // }
     this.components.nav.forEach((button) => {
       button.elmnt.on('click', () => {
         this.focusSelect(button)
@@ -53,19 +34,14 @@ class Component {
     this.elmnt = $(`.${elmnt}`);
     this.visible = true; // ***** set to false in production
   }
-  fadeIn(delay) {
-    this.elmnt.css('transition-delay', `${delay}s`)
-    this.elmnt.removeClass('project-fade')
-    console.log('fade in');
+  fadeIn(speed, delay) {
+    this.elmnt.css({'transition': `${speed}s ${delay}s`, 'opacity': 1})
+
+    //this.elmnt.removeClass('project-fade')
   }
-  fadeOut(delay) {
-    this.elmnt.css('transition-delay', `${delay}s`)
-    this.elmnt.addClass('project-fade')
-    console.log('fade out');
-  }
-  toggleFade(delay) {
-    this.elmnt.css('transition-delay', `${delay}s`)
-    this.elmnt.toggleClass('project-fade')
+  fadeOut(speed, delay) {
+    this.elmnt.css({'transition': `${speed}s ${delay}s`,'opacity': 0})
+    //this.elmnt.addClass('project-fade')
   }
 }
 const pacman = new Component('project-pacman');
@@ -75,22 +51,13 @@ const twitterSearch = new Component('project-twitterSearch')
 const about = new Component('nav-about')
 const projects = new Component('nav-project')
 const contact = new Component('nav-contact')
+const aboutMain = new Component('about-main')
+const aboutAside = new Component('about-aside')
 
 let components = {
-  content: [pacman, asteroid, blink, twitterSearch],
+  content: [pacman, asteroid, blink, twitterSearch, aboutMain, aboutAside],
   nav: [about, projects, contact]
 }
-// let components = {
-//   projects: {
-//     asteroid,
-//     pacman
-//   },
-//   nav: {
-//     about,
-//     projects,
-//     contact
-//   }
-// }
 const controller = new UIController(components)
 $(() => {
   $('.title-fade').removeClass('title-fade');

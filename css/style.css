@@ -1,12 +1,22 @@
 
 body {
-  background-color: rgb(253,243,231);
+  /*background-color: rgb(253,243,231);*/
+  background-image: url('./../assets/lakeMist.jpg');
 }
+/*.backgroundImg {
+  background-image: url('./../assets/lakeMist.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: static;
+  z-index: -1;
+}*/
 .titleBox {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*position: absolute;*/
 }
 .nameBox {
   display: flex;
@@ -33,7 +43,7 @@ body {
   margin: 0;
 }
 .titleSeperator {
-  color: rgb(198,61,15);
+  color: rgb(41,112,150);
   font-weight: bold;
   font-size: 2em;
   transition: opacity 1s;
@@ -41,7 +51,7 @@ body {
 }
 .navBox {
   margin-top: 10px;
-  background-color: rgb(198,61,15);
+  background-color: rgb(41,112,150);
   width: 64%;
   display: flex;
   justify-content: space-around;
@@ -58,7 +68,7 @@ body {
   display: inline;
   margin: 0;
   font-size: 1.1em;
-  color: rgb(253,243,231);
+  color: rgb(245,250,252);
 }
 .navButton:hover {
   cursor: pointer;
@@ -86,17 +96,19 @@ body {
   height: 150px;
   width: 150px;
   margin-right: 5px;
+  box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.09);
 }
 .project {
   display: flex;
   margin-right: 20px;
   margin-bottom: 20px;
-  transition: opacity .8s;
+  transition: 2s;
 }
 .project-detail {
   height: 150px;
   width: 300px;
-  background-color: blue;
+  background-color: #FAFAFA;
+  box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.09);
 }
 .project-detail h3 {
   text-align: center;
@@ -108,10 +120,25 @@ body {
 .project-pacman h3 {
   font-family: 'Press Start 2P', cursive;
 }
-.project-fade {
-  opacity: 0;
+.aboutContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
 }
-
+.about-main {
+  height: 400px;
+  width: 400px;
+  background-color: #FAFAFA;
+  margin-right: 5px;
+  box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.09);
+}
+.about-aside {
+  height: 400px;
+  width: 200px;
+  background-color: rgb(245,250,252);
+  margin-left: 5px;
+  box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.09);
+}
 
 
 
