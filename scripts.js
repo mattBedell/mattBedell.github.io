@@ -1,37 +1,96 @@
 class UIController {
   constructor(componentsToRegister) {
-    this.components = {}
+    //this.components = {}
     this.registerComponents(componentsToRegister)
-    this.registerMouseInOutHandlers(this.components)
+    this.navSelect = 'project'
+    this.registerNavClickEvents()
   }
+  // register all components to controller
   registerComponents(componentsObj) {
-    // save project components
-    this.components.projects = componentsObj.projects
+    // for(let componentType in componentsObj) {
+    //   this.components[componentType] = Object.assign({}, componentsObj[componentType])
+    // }
+    this.components = componentsObj;
+
   }
-  registerMouseInOutHandlers(components) {
-    for(let key in components) {
-      console.log(key)
-    }
+  // Click handler, sets currently selected navButton, hides all other content
+  focusSelect(navComponent) {
+    let fadeCounter = 0;
+    this.components.content.forEach((item) => {
+      if(item.type === navComponent.name) {
+        item.fadeIn(fadeCounter/10);
+        fadeCounter++;
+      } else if(item.type === this.navSelect) {
+        item.fadeOut(0);
+      }
+    })
+    //this.components[]
+    // Inform controller of currently clicked navButton
+    // For all other content, hide it
+    // for(let content in this.components[navSelect])
+    //   this.components[navSelect]
+    this.navSelect = navComponent.name
+    console.log(this.navSelect);
+  }
+  registerNavClickEvents() {
+    // for(let navItem in this.components.nav) {
+    //   this.components.nav[navItem].elmnt.on('click', () => {
+    //     this.focusSelect(this.components.nav[navItem])
+    //     console.log(this.navSelect);
+    //   })
+    // }
+    this.components.nav.forEach((button) => {
+      button.elmnt.on('click', () => {
+        this.focusSelect(button)
+      })
+    })
   }
 }
-class ProjectComponent {
+class Component {
   constructor(elmnt) {
-    this.type = 'project'
+    this.name = elmnt.split('-')[1]
+    this.type = elmnt.split('-')[0]
     this.elmnt = $(`.${elmnt}`);
     this.visible = true; // ***** set to false in production
   }
-  toggleFade() {
+  fadeIn(delay) {
+    this.elmnt.css('transition-delay', `${delay}s`)
+    this.elmnt.removeClass('project-fade')
+    console.log('fade in');
+  }
+  fadeOut(delay) {
+    this.elmnt.css('transition-delay', `${delay}s`)
+    this.elmnt.addClass('project-fade')
+    console.log('fade out');
+  }
+  toggleFade(delay) {
+    this.elmnt.css('transition-delay', `${delay}s`)
     this.elmnt.toggleClass('project-fade')
   }
 }
-const projectPacman = new ProjectComponent('project-pacman');
-const projectAsteroid = new ProjectComponent('project-asteroid-tracker')
+const pacman = new Component('project-pacman');
+const asteroid = new Component('project-asteroid-tracker')
+const blink = new Component('project-blink')
+const twitterSearch = new Component('project-twitterSearch')
+const about = new Component('nav-about')
+const projects = new Component('nav-project')
+const contact = new Component('nav-contact')
+
 let components = {
-  projects: {
-    projectPacman,
-    projectAsteroid
-  }
+  content: [pacman, asteroid, blink, twitterSearch],
+  nav: [about, projects, contact]
 }
+// let components = {
+//   projects: {
+//     asteroid,
+//     pacman
+//   },
+//   nav: {
+//     about,
+//     projects,
+//     contact
+//   }
+// }
 const controller = new UIController(components)
 $(() => {
   $('.title-fade').removeClass('title-fade');
