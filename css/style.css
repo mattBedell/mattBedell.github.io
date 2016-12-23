@@ -102,6 +102,8 @@ body {
   display: flex;
   margin-right: 20px;
   margin-bottom: 20px;
+  visibility: hidden;
+  opacity: 0;
   transition: 2s;
 }
 .project-detail {
