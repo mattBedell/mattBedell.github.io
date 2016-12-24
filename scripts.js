@@ -2,7 +2,7 @@ class UIController {
   constructor(componentsToRegister) {
     //this.components = {}
     this.components = componentsToRegister; // register all components to controller
-    this.navSelect = 'project'
+    this.navSelect = 'about'
     this.registerNavClickEvents()
   }
   // Updates controller to currently selected navButton, hides all other content
@@ -34,7 +34,7 @@ class ContentComponent {
     this.name = elmnt.split('-')[1]
     this.type = elmnt.split('-')[0]
     this.elmnt = $(`.${elmnt}`);
-    this.visible = true; // ***** set to false in production
+    this.visible = false; // ***** set to false in production
     this.elmnt.on('transitionend', () => {
       if(!this.visible) {
         this.elmnt.css('visibility', 'hidden')
@@ -57,13 +57,17 @@ class NavComponent {
     this.elmnt = $(`.${elmnt}`);
   }
 }
+// init project components
 const pacman = new ContentComponent('project-pacman');
 const asteroid = new ContentComponent('project-asteroid-tracker')
 const blink = new ContentComponent('project-blink')
 const twitterSearch = new ContentComponent('project-twitterSearch')
+
+// init about components
 const aboutMain = new ContentComponent('about-main')
 const aboutAside = new ContentComponent('about-aside')
 
+// init nav components
 const about = new NavComponent('nav-about')
 const projects = new NavComponent('nav-project')
 const contact = new NavComponent('nav-contact')
