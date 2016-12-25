@@ -4,6 +4,7 @@ html {
 /* https://css-tricks.com/box-sizing/ */
 *, *:before, *:after {
   box-sizing: inherit;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   /*background-color: rgb(253,243,231);*/
@@ -160,18 +161,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(134,170,189);
+  background-color: rgb(220,228,239);
   overflow: hidden;
-  border-right: 1px solid #FAFAFA;
+  /*border-right: 1px solid #FAFAFA;*/
 }
 .header-top .headshot-container .headshot {
   height: 10vh;
   width: 10vh;
-  border: 1px solid rgb(134,170,189);
+  border: 1px solid rgb(220,228,239);
   border-radius: 100%;
 }
 .header-top .header-title {
-  background-color: rgb(134,170,189);
+  background-color: rgb(220,228,239);
   font-size: 1.2vmax;
   width: 36vmax;
   padding: 5px;
@@ -182,7 +183,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(134,170,189);
+  background-color: rgb(220,228,239);
   border-top: 1px solid #FAFAFA;
 }
 .header-links .link-box {
@@ -196,7 +197,7 @@ body {
 }
 .header-links .link-box a {
   font-size: 2vmin;
-  color: rgb(245,250,252);
+  color: rgb(59,55,56);
 }
 .header-links .link-box a:link {
   text-decoration: none;
@@ -205,23 +206,22 @@ body {
 .about-content {
   height: 70%;
   width: 100%;
-  background-color: rgb(134,170,189);
-  padding: 5px;
+  background-color: rgb(230,250,252);
   border-top: 3px solid #FAFAFA;
 
 }
 .about-content .about-content-text {
   height: 70%;
-  background-color: #FAFAFA;
+  background-color: rgb(245,250,252);
 }
 .about-content .about-content-skills {
   height: 30%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: #FAFAFA;
-  border-top: 1px solid rgb(134,170,189);
-  border: 1px solid red;
+  justify-content: space-between;
+  background-color: rgb(245,250,252);
+  border-top: 1px solid #FAFAFA;
+  padding: 2px;
 }
 .about-content .about-content-skills .skill {
   height: 30%;
@@ -229,9 +229,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  padding: 5px;
-  margin: 3px;
+  background-color: rgb(240,240,240);
+  color: rgb(59,55,56);
 }
 
 
