@@ -130,12 +130,11 @@ body {
 }
 /* ----> about-main --- */
 .about-main {
-  height: 70vh;
+  height: 60vh;
   width: 38vw;
   display: flex;
   flex-direction: column;
   margin-right: 5px;
-  border: 1px solid red;
 }
 /* ----> about-main -> about-header --- */
 .about-header {
@@ -145,12 +144,12 @@ body {
   padding: 5px;
 }
   .headshot-section {
-    height: 70%;
+    height: 75%;
     display: flex;
   }
   .headshot-container {
     height: 100%;
-    width: 17%;
+    width: 13%;
     background-image: url('./../assets/headshot.jpeg');
     background-size: 100% 100%;
   }
@@ -158,19 +157,21 @@ body {
     width: 83%;
     display: flex;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 10px;
   }
   .header-title h2 {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
   .header-links {
     width: 100%;
-    height: 30%;
+    height: 21%;
     align-self: flex-end;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    background-color: rgb(41,112,150);
+    padding: 0 10px 0 10px;
+    margin-top: 1%;
   }
   .link-box {
     height: 100%;
@@ -179,18 +180,18 @@ body {
   }
     .link-box img {
       margin-right: 2px;
-      height: 100%;
-      width: 2vmin;
+      height: 15px;
+      width: 15px;
     }
     .link-box a {
       font-size: 2vmin;
-      color: rgb(59,55,56);
+      color: rgb(245,250,252);
     }
     .link-box a:link {
       text-decoration: none;
     }
 .about-me {
-  height: 50%;
+  height: 70%;
   background-color: #FAFAFA;
   padding: 5px;
   margin-top: 5px;
@@ -218,7 +219,7 @@ body {
 
 /* ----> about-aside --- */
 .about-aside {
-  height: 400px;
+  height: 60vh;
   width: 200px;
   background-color: rgb(245,250,252);
   margin-left: 5px;

@@ -82,6 +82,15 @@ let components = {
 }
 const controller = new UIController(components)
 $(() => {
-  $('.title-fade').removeClass('title-fade');
-  $('.navBox').removeClass('navBox-fade');
+  // wait for twitter iFrame to load and resize to parent element's height
+  let checkTwitterLoadAndResize = () => {
+    if($('.about-aside').children().first().is('iframe')) {
+      $('.about-aside').children().first().css('height', '60vh');
+    } else {
+      window.setTimeout(() => {
+        checkTwitterLoadAndResize()
+      }, 500)
+    }
+  }
+  checkTwitterLoadAndResize()
 })
