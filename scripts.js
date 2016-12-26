@@ -64,7 +64,9 @@ const blink = new ContentComponent('project-blink')
 const twitterSearch = new ContentComponent('project-twitterSearch')
 
 // init about components
-const aboutMain = new ContentComponent('about-main')
+const aboutHeader = new ContentComponent('about-header')
+const aboutMe = new ContentComponent('about-me')
+const aboutSkills = new ContentComponent('about-skills')
 const aboutAside = new ContentComponent('about-aside')
 
 // init nav components
@@ -75,7 +77,7 @@ const contact = new NavComponent('nav-contact')
 let components = {
   content: {
     project: [pacman, asteroid, blink, twitterSearch],
-    about: [aboutMain, aboutAside],
+    about: [aboutHeader, aboutMe, aboutSkills, aboutAside],
     contact: []
   },
   nav: [about, projects, contact]
