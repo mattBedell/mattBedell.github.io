@@ -12,8 +12,6 @@ class App extends Component {
     }
   }
   handleNavClick(selection) {
-    //console.log(this);
-    console.log(selection);
     this.setState({
       selected: selection
     })
@@ -26,7 +24,9 @@ class App extends Component {
         <Nav
           handleNavClick={(selection) => this.handleNavClick(selection)}
         />
-        <About />
+        <About
+          selected={this.state.selected}
+        />
       </div>
     );
   }
