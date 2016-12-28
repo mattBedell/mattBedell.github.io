@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Matt Bedell | WebDev</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  </head>
+  <body>
+    <div class="backgroundImg"></div>
+    <div class="titleBox">
+      <div class="nameBox">
+        <p class="nameTitle title-show">Matt Bedell</p>
+        <p class="titleSeperator title-show">&nbsp|&nbsp</p>
+        <p class="jobTitle title-show">Web Developer</p>
+        <div class="navBox">
+          <p class="navButton nav-about">About</p>
+          <p class="navSeperator">|</p>
+          <p class="navButton nav-project">My Work</p>
+          <p class="navSeperator">|</p>
+          <p class="navButton nav-contact">Contact</p>
+        </div>
+      </div>
+    </div>
+    <div class="contentContainer">
+      <div class="aboutContainer">
+        <div class="about-main">
+          <div class="about-header">
+            <div class="headshot-section">
+              <div class="headshot-container">
+              </div>
+              <div class="header-title">
+                <h2>I'm a learner that is also a developer.</h2>
+              </div>
+            </div>
+            <div class="header-links">
+              <div class="link-box">
+                <img src="./assets/icons/githubBlueCircle.png" alt="Github icon">
+                <a href="https://github.com/mattBedell?tab=stars" target="_blank">Github</a>
+              </div>
+              <div class="link-box">
+                <img src="./assets/icons/linkedinBlackSquare.png" alt="Linkedin icon">
+                <a href="https://www.linkedin.com/in/matthewbedell" target="_blank">Linkedin</a>
+              </div>
+              <div class="link-box">
+                <img src="./assets/icons/twitterBlackCircle.png" alt="Twitter icon">
+                <a href="https://twitter.com/mj_Bedell" target="_blank">Twitter</a>
+              </div>
+            </div>
+          </div>
+          <div class="about-me">
+            I'm a developer based in NYC. I have experience building full-stack web apps,
+            responsive, mobile friendly websites, and I love to code.
+            <br>
+            <br>
+            I have the most fun when I'm solving problems with code. I like to build
+            backend servers with Node, and am proficient with postgreSQL, and MongoDB.
+            <br>
+            <br>
+            I've recently rediscovered my love for the frontend
+            with the help of React. I'm also proficient with HTML5 and CSS.
+            <br>
+            <br>
+            Check out my most recent app: Asteroid-Tracker
+          </div>
+          <div class="about-skills">
+            <div class="skill">React.js</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Express.js</div>
+            <div class="skill">PostgreSQL</div>
+            <div class="skill">Javascript</div>
+            <div class="skill">jQuery</div>
+            <div class="skill">GIT</div>
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS</div>
+          </div>
+        </div>
+        <div class="about-aside">
+          <a class="twitter-timeline" data-width="200" data-height="400" data-dnt="true" href="https://twitter.com/mj_Bedell">Tweets by mj_Bedell</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+      <div class="projectsContainer">
+        <div class="project project-pacman">
+          <img src="./assets/pacman.png" alt="Pacman" />
+          <div class="project-detail">
+            <h3>Pacman</h3>
+            <p>Pacman clone. Eat all the dots to win and avoid the ghosts!</p>
+            <div class="project-skills">
+              <div class="skill">Javascript</div>
+              <div class="skill">HTML5</div>
+              <div class="skill">CSS</div>
+            </div>
+          </div>
+        </div>
+        <div class="project project-asteroid-tracker">
+          <img src="./assets/asteroid-tracker.png" alt="Asteroid tracker" />
+          <div class="project-detail">
+            <h3>Asteroid-Tracker</h3>
+            <p>Displays the relative distances of Near Earth Asteroids in of the current day and in 2016.
+              <br>
+              Utilizes Nasa's NEO API to collect data.  Uses an Express server and a postgreSQL database to store and serve historical data to a React front-end.
+            </p>
+            <div class="project-skills">
+              <div class="skill">React.js</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">Express.js</div>
+              <div class="skill">PostgreSQL</div>
+              <div class="skill">CSS</div>
+            </div>
+          </div>
+        </div>
+        <div class="project project-blink">
+          <img src="./assets/blink.png" alt="Blink" />
+          <div class="project-detail">
+            <h3>Blink!</h3>
+            <p>A collaborative group project.  Search for places and attractions and save them to your bucket list.
+              <br>
+              Utilizes Google's places API to allow the user to search for attractions.  Features Google User Auth to allow the user to sign in with their Gmail account.
+              <br>
+              Express server and postgreSQL to manage user accounts and data, served to a React front-end.
+            </p>
+            <div class="project-skills">
+              <div class="skill">React.js</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">Express.js</div>
+              <div class="skill">PostgreSQL</div>
+              <div class="skill">CSS</div>
+            </div>
+          </div>
+        </div>
+        <div class="project project-twitterSearch">
+          <img src="./assets/twitterSearch.png" alt="twitter search" />
+          <div class="project-detail">
+            <h3>Twitter Search</h3>
+            <p>Search for tweets and analyze them for emotional content, sentiment, and key concepts.
+              <br>
+              Utilizes Twitter's API and Watson's text analysis API. Allows the user to do a general search of all tweets, and to choose which tweets to analyze. The user can then save tweets to their account.
+              <br>
+              Express server and EJS for server-side rendering. PostgreSQL for managing user profiles and saved data.
+            </p>
+            <div class="project-skills">
+              <div class="skill">Javascript</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">Express.js</div>
+              <div class="skill">EJS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript"></script>
+  </body>
+</html>
+<!-- &nbsp -->
