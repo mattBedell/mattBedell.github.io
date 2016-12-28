@@ -1,8 +1,9 @@
-.container {
+.about-container {
   margin-top: 3vh;
   width: 100vw;
   display: flex;
   justify-content: center;
+  position: absolute;
 }
 .main {
   width: 35%;

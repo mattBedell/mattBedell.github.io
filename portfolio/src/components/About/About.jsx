@@ -4,60 +4,65 @@ import './About.css'
 import { Timeline } from 'react-twitter-widgets'
 
 class About extends Component {
-  constructor(props) {
-    super(props)
-    this.twitter = 'wait for twitter frame to load'
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.twitter = 'wait for twitter frame to load'
+  // }
   componentDidMount() {
     document.querySelector('.twitter-timeline').setAttribute('data-height', '100%')
     document.querySelector('.twitter-timeline').setAttribute('data-width', '100%')
-    const header = document.querySelector('.header')
-    const content = document.querySelector('.content')
-    const skills = document.querySelector('.skills')
+    // const header = document.querySelector('.header')
+    // const content = document.querySelector('.content')
+    // const skills = document.querySelector('.skills')
     const aside = document.querySelector('.aside')
-    setTimeout(() => {
-      this.twitter = document.querySelector('#twitter-widget-0')
-    }, 1000)
-    header.addEventListener('transitionend', () => {
-      if(this.props.selected === 'about') {
-        header.style.visibility = 'visible'
-      } else {
-        header.style.visibility = 'hidden'
-      }
-    })
-    content.addEventListener('transitionend', () => {
-      if(this.props.selected === 'about') {
-        content.style.visibility = 'visible'
-      } else {
-        content.style.visibility = 'hidden'
-      }
-    })
-    skills.addEventListener('transitionend', () => {
-      if(this.props.selected === 'about') {
-        skills.style.visibility = 'visible'
-      } else {
-        skills.style.visibility = 'hidden'
-      }
-    })
+    // setTimeout(() => {
+    //   this.twitter = document.querySelector('#twitter-widget-0')
+    // }, 1000)
+    // header.addEventListener('transitionend', () => {
+    //   if(this.props.selected === 'about') {
+    //     header.style.visibility = 'visible'
+    //   } else {
+    //     header.style.visibility = 'hidden'
+    //   }
+    // })
+    // content.addEventListener('transitionend', () => {
+    //   if(this.props.selected === 'about') {
+    //     content.style.visibility = 'visible'
+    //   } else {
+    //     content.style.visibility = 'hidden'
+    //   }
+    // })
+    // skills.addEventListener('transitionend', () => {
+    //   if(this.props.selected === 'about') {
+    //     skills.style.visibility = 'visible'
+    //   } else {
+    //     skills.style.visibility = 'hidden'
+    //   }
+    // })
     aside.addEventListener('transitionend', () => {
       if(this.props.selected === 'about') {
-        aside.style.visibility = 'visible'
-        this.twitter.style.visibility ='visible'
+        // aside.style.visibility = 'visible'
+        // this.twitter.style.visibility ='visible'
       } else {
-        aside.style.visibility = 'hidden'
-        this.twitter.style.visibility ='hidden'
+        document.querySelector('.about-container').style.visibility = 'hidden'
+        // aside.style.visibility = 'hidden'
+        // this.twitter.style.visibility ='hidden'
       }
     })
   }
   componentDidUpdate() {
+    if(this.props.selected === 'about') {
+      document.querySelector('.about-container').style.visibility = 'visible'
+    }
     // setTimeout(() => {
-      if(this.props.selected === 'about') {
-        this.twitter.style.transitionDelay = '0s'
-        this.twitter.style.opacity = '1'
-      } else {
-        this.twitter.style.transitionDelay = '0s'
-        this.twitter.style.opacity = '0'
-      }
+      // if(this.props.selected === 'about') {
+      //   document.querySelector('.about-container').style.visibility = 'hidden'
+      //   this.twitter.style.transitionDelay = '0s'
+      //   this.twitter.style.opacity = '1'
+      // } else {
+      //   this.twitter.style.transitionDelay = '0s'
+      //   this.twitter.style.opacity = '0'
+      // }
     // }, 1000)
   }
   fade(delay) {
@@ -69,7 +74,7 @@ class About extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="about-container">
         <div className="main">
           <div className="header" style={this.fade(.1)}>
             <div className="headshot"></div>

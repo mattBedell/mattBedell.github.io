@@ -1,0 +1,22 @@
+.projects-container {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.navList {
+  width: 20%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+.nav {
+  margin-bottom: 5px;
+  width: 98%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+}
