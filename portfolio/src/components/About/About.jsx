@@ -34,9 +34,9 @@ class About extends Component {
   }
   fade(delay) {
     if(this.props.selected === 'about' && this.props.contentToDisplay === 'about') {
-      return {'opacity': `${this.state.componentOpacity}`, 'transitionDelay': `${delay}s`}
+      return {'opacity': `${this.state.componentOpacity}`, 'transition': 'opacity 1.5s', 'transitionDelay': `${delay}s`}
     } else {
-      return {'opacity': '0', 'transitionDelay': '0s'}
+      return {'opacity': '0', 'transition': 'opacity .5s', 'transitionDelay': '0s'}
     }
   }
   render() {
