@@ -3,7 +3,6 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  position: absolute;
 }
 .main {
   width: 35%;
@@ -14,6 +13,7 @@
   width: 20%;
   height: 60vh;
   background-color: #FAFAFA;
+  opacity: 0;
   transition: .5s;
 }
 .header {
@@ -22,6 +22,7 @@
   background-color: #FAFAFA;
   display: flex;
   flex-wrap: wrap;
+  opacity: 0;
   transition: .5s;
 }
 .headshot {
@@ -47,6 +48,7 @@
   width: 100%;
   height: 60%;
   background-color: #FAFAFA;
+  opacity: 0;
   transition: .5s;
 }
 .skills {
@@ -58,6 +60,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  opacity: 0;
   transition: .5s;
 }
 .skillBox {

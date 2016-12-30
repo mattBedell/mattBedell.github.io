@@ -8,6 +8,7 @@ class Projects extends Component {
     super(props)
     this.state = {
       selected: 'pacman',
+      componentOpacity: 0
     }
   }
   handleClick(selected, e) {
@@ -22,17 +23,30 @@ class Projects extends Component {
   }
   componentDidMount() {
     this.setState({
-      prev: document.querySelector('.navPacman')
+      prev: document.querySelector('.navPacman'),
     })
+    document.querySelector('.navTwitter').addEventListener('transitionend', () => {
+      if(this.props.selected !== 'project' && this.props.contentToDisplay === 'project') {
+        this.props.handleContentToDisplay()
+      }
+    })
+    setTimeout(() => this.setState({componentOpacity: 1}))
+  }
+  fade(delay) {
+    if(this.props.selected === 'project') {
+      return {'opacity': `${this.state.componentOpacity}`, 'transitionDelay': `${delay}s`}
+    } else {
+      return {'opacity': '0', 'transitionDelay': '0s'}
+    }
   }
   render() {
     return(
       <div className="projects-container">
         <div className="navList">
-          <div className="nav navPacman" style={{'width': '100%'}}onClick={(e) => this.handleClick('pacman', e)}> Pacman </div>
-          <div className="nav navAsteroid" onClick={(e) => this.handleClick('asteroid', e)}> Asteroid Tracker </div>
-          <div className="nav navBlink" onClick={(e) => this.handleClick('blink', e)}> Blink </div>
-          <div className="nav navTwitter" onClick={(e) => this.handleClick('twitter', e)}> Twitter </div>
+          <div className="nav navPacman" style={this.fade(.1)}onClick={(e) => this.handleClick('pacman', e)}> Pacman </div>
+          <div className="nav navAsteroid" style={this.fade(.15)}onClick={(e) => this.handleClick('asteroid', e)}> Asteroid Tracker </div>
+          <div className="nav navBlink" style={this.fade(.2)}onClick={(e) => this.handleClick('blink', e)}> Blink </div>
+          <div className="nav navTwitter" style={this.fade(.25)}onClick={(e) => this.handleClick('twitter', e)}> Twitter </div>
         </div>
       <ProjectDisplay
         selected={this.state.selected}

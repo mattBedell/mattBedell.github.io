@@ -9,13 +9,35 @@ class App extends Component {
   constructor(props) {
     super()
     this.state = {
-      selected: 'projects'
+      selected: 'about',
+      contentToDisplay: 'about'
     }
   }
   handleNavClick(selection) {
     this.setState({
       selected: selection
     })
+  }
+  handleContentToDisplay() {
+    this.setState({
+      contentToDisplay: this.state.selected
+    })
+  }
+  renderSection() {
+    switch(this.state.contentToDisplay) {
+      case 'about':
+      return (<About
+        selected={this.state.selected}
+        contentToDisplay={this.state.contentToDisplay}
+        handleContentToDisplay={() => this.handleContentToDisplay()}
+      />)
+      case 'project':
+      return (<Projects
+        selected={this.state.selected}
+        contentToDisplay={this.state.contentToDisplay}
+        handleContentToDisplay={() => this.handleContentToDisplay()}
+      />)
+    }
   }
 
   render() {
@@ -25,12 +47,7 @@ class App extends Component {
         <Nav
           handleNavClick={(selection) => this.handleNavClick(selection)}
         />
-        <About
-          selected={this.state.selected}
-        />
-        <Projects
-          selected={this.state.selected}
-        />
+        {this.renderSection()}
       </div>
     );
   }
