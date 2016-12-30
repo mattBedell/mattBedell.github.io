@@ -82,7 +82,17 @@ class About extends Component {
             </div>
           </div>
           <div className="aside" style={this.fade(.3)}>
-            {/* <a className="twitter-timeline" data-width="200" data-height="400" data-dnt="true" href="https://twitter.com/mj_Bedell" style={{'visibility': 'hidden'}}>Tweets by mj_Bedell</a> */}
+            <Timeline
+              dataSource={{
+                sourceType: 'profile',
+                screenName: 'mj_Bedell'
+              }}
+              options={{
+                username: 'mj_Bedell',
+                height: '60vh'
+              }}
+              onLoad={() => console.log('Timeline is loaded!')}
+            />
           </div>
         </div>
       )
