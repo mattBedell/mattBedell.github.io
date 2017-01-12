@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './Nav/Nav.jsx'
 import About from './About/About.jsx'
 import Projects from './Projects/Projects.jsx'
+import Contact from './Contact/Contact.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +38,14 @@ class App extends Component {
         contentToDisplay={this.state.contentToDisplay}
         handleContentToDisplay={() => this.handleContentToDisplay()}
       />)
+      case 'contact':
+      return (<Contact
+        selected={this.state.selected}
+        contentToDisplay={this.state.contentToDisplay}
+        handleContentToDisplay={() => this.handleContentToDisplay()}
+      />)
+      default:
+      console.log('nav error')
     }
   }
 
