@@ -7,28 +7,39 @@ class Projects extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selected: 'pacman',
+      displayProject: 'pacman',
       componentOpacity: 0
     }
   }
   handleClick(selected, e) {
-    e.target.style.width = "100%"
-    if(this.state.prev && this.state.prev !== e.target) {
-      this.state.prev.style.width = "98%"
+    let navPrev = this.state.navCurrent;
+    let navCurrent = e.target.nextElementSibling
+    if(navPrev !== navCurrent) {
+      navPrev.style.width = '98%'
+      navPrev.style.opacity = '.7'
     }
+    navCurrent.style.width = '100%'
+    navCurrent.style.opacity = '1'
     this.setState({
-      selected: selected,
-      prev: e.target
+      displayProject: selected,
+      navCurrent,
+      navPrev
+
     })
+
+
   }
   componentDidMount() {
-    this.setState({
-      prev: document.querySelector('.navPacman'),
-    })
-    document.querySelector('.navTwitter').addEventListener('transitionend', () => {
+    let lastOut = document.querySelector('.lastOut')
+    lastOut.addEventListener('transitionend', () => {
       if(this.props.selected !== 'project' && this.props.contentToDisplay === 'project') {
         this.props.handleContentToDisplay()
       }
+    })
+    let defaultSelected = document.querySelector('.projPacman').nextElementSibling
+    this.setState({
+      navCurrent: defaultSelected,
+      navPrev: defaultSelected
     })
     setTimeout(() => this.setState({componentOpacity: 1}))
   }
@@ -43,14 +54,28 @@ class Projects extends Component {
     return(
       <div className="projects-container">
         <div className="navList">
-          <div className="nav navPacman" style={this.fade(.1)}onClick={(e) => this.handleClick('pacman', e)}> Pacman </div>
-          <div className="nav navAsteroid" style={this.fade(.15)}onClick={(e) => this.handleClick('asteroid', e)}> Asteroid Tracker </div>
-          <div className="nav navBlink" style={this.fade(.2)}onClick={(e) => this.handleClick('blink', e)}> Blink </div>
-          <div className="nav navTwitter" style={this.fade(.25)}onClick={(e) => this.handleClick('twitter', e)}> Twitter </div>
+          <div className="navPacman nav" style={this.fade(.1)}>
+            <div className="projPacman projButton" onClick={(e) => this.handleClick('pacman', e)}>Pacman</div>
+            <div className="navBg"></div>
+          </div>
+          <div className="nav" style={this.fade(.15)}>
+            <div className="projButton" onClick={(e) => this.handleClick('asteroid', e)}>Asteroid Tracker</div>
+            <div className="navBg"></div>
+          </div>
+          <div className="nav" style={this.fade(.2)}>
+            <div className="projButton" onClick={(e) => this.handleClick('blink', e)}>Blink</div>
+            <div className="navBg"></div>
+          </div>
+          <div className="lastOut nav" style={this.fade(.25)}>
+            <div className="projButton" onClick={(e) => this.handleClick('twitter', e)}>Twitter</div>
+            <div className="navBg"></div>
+          </div>
         </div>
-      <ProjectDisplay
-        selected={this.state.selected}
-      />
+        <div className="projectDisplayContainer" style={this.fade(.4)}>
+          <ProjectDisplay
+            selected={this.state.displayProject}
+          />
+        </div>
       </div>
     )
   }

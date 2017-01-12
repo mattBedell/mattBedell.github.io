@@ -13,12 +13,33 @@
 }
 .nav {
   margin-bottom: 5px;
-  width: 98%;
+  width: 100%;
   height: 10%;
+  transition: opacity .5s;
+  opacity: 0;
+  position: relative;
+}
+.projButton {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+}
+.navBg {
+  height: 100%;
+  width: 98%;
+  opacity: .7;
   background-color: #FAFAFA;
-  transition: opacity .5s;
+  position: absolute;
+  z-index: -1;
+}
+.navPacman .navBg {
+  width: 100%;
+  opacity: 1;
+}
+.projectDisplayContainer {
   opacity: 0;
+  width: 30%;
 }
