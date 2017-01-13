@@ -39,11 +39,22 @@ class Contact extends Component {
     return(
       <div className='lastOut contact' style={this.fade(.1)}>
         <form action="javascript:void(0);" onSubmit={() => this.submitForm()}>
-        <input type="text" onChange={(e) => this.updateField('name', e)}></input>
-        <input type="email" onChange={(e) => this.updateField('email', e)}></input>
-        <input type="text" onChange={(e) => this.updateField('body', e)}></input>
-        <button type="submit"></button>
-      </form>
+          <div className="nameEmailContainer">
+            <div>
+              <input id="name"type="text" autoCapitalize="words" required onChange={(e) => this.updateField('name', e)} />
+              <label htmlFor="name">Name/Company</label>
+            </div>
+            <div>
+              <input id="email" type="email" required onChange={(e) => this.updateField('email', e)} />
+              <label htmlFor="email">Email</label>
+            </div>
+          </div>
+          <div>
+            <textarea id="message" required onChange={(e) => this.updateField('body', e)} />
+            <label htmlFor="message">Message</label>
+          </div>
+          <button type="submit"></button>
+        </form>
       </div>
     )
   }

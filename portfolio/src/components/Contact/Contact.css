@@ -1,6 +1,45 @@
 .contact {
-  height: 40vh;
-  width: 50%;
+  height: 30vh;
+  width: 30%;
   background-color: #FAFAFA;
   margin-top: 30px;
+}
+textarea {
+  resize: none;
+}
+form {
+  border: 1px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.nameEmailContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nameEmailContainer  div {
+  position: relative;
+  width: 50%;
+}
+input {
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  outline: none;
+}
+textarea {
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+form label {
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  color: gray;
 }
