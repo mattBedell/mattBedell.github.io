@@ -18,7 +18,10 @@ class About extends Component {
       }
     })
     setTimeout(() => this.setState({componentOpacity: 1}))
-    // document.querySelector('.twitter-timeline').setAttribute('data-height', '100%')
+    setTimeout(() => {
+      this.twitterTimeline = document.querySelector('.twitter-timeline')
+      console.log(this.twitterTimeline);
+    }, 1000)
     // document.querySelector('.twitter-timeline').setAttribute('data-width', '100%')
     // const aside = document.querySelector('.aside')
     // aside.addEventListener('transitionend', () => {
@@ -36,6 +39,7 @@ class About extends Component {
     if(this.props.selected === 'about' && this.props.contentToDisplay === 'about') {
       return {'opacity': `${this.state.componentOpacity}`, 'transition': 'opacity 1.5s', 'transitionDelay': `${delay}s`}
     } else {
+      this.twitterTimeline.style.visibility = "hidden"
       return {'opacity': '0', 'transition': 'opacity .5s', 'transitionDelay': '0s'}
     }
   }
@@ -91,7 +95,6 @@ class About extends Component {
                 username: 'mj_Bedell',
                 height: '60vh'
               }}
-              onLoad={() => console.log('Timeline is loaded!')}
             />
           </div>
         </div>
