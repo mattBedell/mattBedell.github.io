@@ -8,30 +8,28 @@ const transporter = nodemailer.createTransport(
       pass: process.env.SMTP_PASS
     }
 })
-function mailSender() {
-  function getMailInfo(req) {
-    const mailOptions = {
-      from: `${req.body.name} <CannotAlterSenderOnGmailServers@gmail.com>`,
-      to: process.env.MY_EMAIL,
-      subject: `PORTFOLIO CONTACT: ${req.body.email}`,
-      text: req.body.text
-    }
-    return mailOptions
+function getMailInfo(req) {
+  const mailOptions = {
+    from: `${req.body.name} <CannotAlterSenderOnGmailServers@gmail.com>`,
+    to: process.env.MY_EMAIL,
+    subject: `PORTFOLIO CONTACT: ${req.body.email}`,
+    text: req.body.text
   }
-  function sendMail(req, res, next) {
-    console.log(req.body.email);
-    //console.log(req.body);
-    transporter.sendMail(getMailInfo(req), (err, info) => {
-      if(err) {
-        console.log(`Send Mail error: ${err}`);
-      } else {
-        console.log(`Sent Mail : ${info.response}`);
-      }
-    })
-  }
-
-  return {
-    sendMail
-  }
+  return mailOptions
 }
-module.exports = mailSender()
+function sendMail(req, res, next) {
+  transporter.sendMail(getMailInfo(req), (err, info) => {
+    if(err) {
+      next(err)
+    } else {
+      res.contactSender = req.body.email
+      res.contactName = req.body.name
+
+      console.log(`Mail Sent to ${process.env.MY_EMAIL} from: ${res.contactName} - ${res.contactSender}`)
+      res.status(204).end()
+    }
+  })
+}
+module.exports = {
+  sendMail
+}

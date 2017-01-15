@@ -38,7 +38,6 @@ class About extends Component {
     if(this.props.selected === 'about' && this.props.contentToDisplay === 'about') {
       return {'opacity': `${this.state.componentOpacity}`, 'transition': 'opacity 1.5s', 'transitionDelay': `${delay}s`}
     } else {
-      this.twitterTimeline.style.visibility = "hidden"
       return {'opacity': '0', 'transition': 'opacity .5s', 'transitionDelay': '0s'}
     }
   }
