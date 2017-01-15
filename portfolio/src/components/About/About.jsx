@@ -12,15 +12,15 @@ class About extends Component {
   }
 
   componentDidMount() {
-    document.querySelector('.aside').addEventListener('transitionend', () => {
+    document.querySelector('.lastOut').addEventListener('transitionend', () => {
       if(this.props.selected !== 'about' && this.props.contentToDisplay === 'about') {
         this.props.handleContentToDisplay()
       }
     })
     setTimeout(() => this.setState({componentOpacity: 1}))
-    setTimeout(() => {
-      this.twitterTimeline = document.querySelector('.twitter-timeline')
-    }, 1000)
+    // setTimeout(() => {
+    //   this.twitterTimeline = document.querySelector('.twitter-timeline')
+    // }, 1000)
     // document.querySelector('.twitter-timeline').setAttribute('data-width', '100%')
     // const aside = document.querySelector('.aside')
     // aside.addEventListener('transitionend', () => {
@@ -84,7 +84,7 @@ class About extends Component {
               <div className="skillBox">CSS</div>
             </div>
           </div>
-          <div className="aside" style={this.fade(.3)}>
+          <div className="lastOut aside" style={this.fade(.3)}>
             <Timeline
               dataSource={{
                 sourceType: 'profile',
