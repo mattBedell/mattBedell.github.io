@@ -55,16 +55,16 @@ class Contact extends Component {
           <div className="nameEmailContainer">
             <div>
               <input id="name"type="text" autoCapitalize="words" required onChange={(e) => this.updateField('name', e)} />
-              {/* <label htmlFor="name">Name/Company</label> */}
+              <label htmlFor="name">Name/Company</label>
             </div>
             <div>
               <input id="email" type="email" required onChange={(e) => this.updateField('email', e)} />
-              {/* <label htmlFor="email">Email</label> */}
+              <label htmlFor="email">Email</label>
             </div>
           </div>
           <div>
             <textarea id="message" type="text" required onChange={(e) => this.updateField('text', e)}></textarea>
-            {/* <label htmlFor="message">Message</label> */}
+            <label htmlFor="message">Message</label>
           </div>
           <button type="submit"></button>
         </form>
