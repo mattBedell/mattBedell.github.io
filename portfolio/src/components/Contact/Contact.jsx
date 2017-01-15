@@ -24,7 +24,7 @@ class Contact extends Component {
       email,
       text
     }
-    fetch('/sendOut', {
+    fetch('http://mb-portfolio-mail-sender.herokuapp.com/sendOut', {
       headers: {
         'Content-Type': 'application/json'
       },

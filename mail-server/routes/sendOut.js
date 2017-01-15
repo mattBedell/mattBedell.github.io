@@ -8,6 +8,7 @@ const sendErrorResponse = (err, req, res, next) => {
   console.log(`Send Mail Error: ${err}`);
   res.status(503).end()
 }
+
 router.route('')
   .post(parseJson, sendMail, sendErrorResponse)
 
