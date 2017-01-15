@@ -4,10 +4,11 @@ import './Contact.css'
 class Contact extends Component {
   constructor(props) {
     super(props)
+    this.submitForm = this.submitForm.bind(this)
     this.state = {
       name: '',
       email: '',
-      body: '',
+      text: '',
       componentOpacity: 0
     }
   }
@@ -17,7 +18,19 @@ class Contact extends Component {
     })
   }
   submitForm() {
-    console.log('submitted')
+    const {name, email, text} = this.state;
+    const payload = {
+      name,
+      email,
+      text
+    }
+    fetch('/sendOut', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(payload)
+    })
   }
   fade(delay) {
     if(this.props.selected === 'contact') {
@@ -38,20 +51,20 @@ class Contact extends Component {
   render() {
     return(
       <div className='lastOut contact' style={this.fade(.1)}>
-        <form action="javascript:void(0);" onSubmit={() => this.submitForm()}>
+        <form action="javascript:void(0);" onSubmit={this.submitForm}>
           <div className="nameEmailContainer">
             <div>
               <input id="name"type="text" autoCapitalize="words" required onChange={(e) => this.updateField('name', e)} />
-              <label htmlFor="name">Name/Company</label>
+              {/* <label htmlFor="name">Name/Company</label> */}
             </div>
             <div>
               <input id="email" type="email" required onChange={(e) => this.updateField('email', e)} />
-              <label htmlFor="email">Email</label>
+              {/* <label htmlFor="email">Email</label> */}
             </div>
           </div>
           <div>
-            <textarea id="message" required onChange={(e) => this.updateField('body', e)} />
-            <label htmlFor="message">Message</label>
+            <textarea id="message" type="text" required onChange={(e) => this.updateField('text', e)}></textarea>
+            {/* <label htmlFor="message">Message</label> */}
           </div>
           <button type="submit"></button>
         </form>

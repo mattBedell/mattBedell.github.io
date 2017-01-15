@@ -20,7 +20,6 @@ class About extends Component {
     setTimeout(() => this.setState({componentOpacity: 1}))
     setTimeout(() => {
       this.twitterTimeline = document.querySelector('.twitter-timeline')
-      console.log(this.twitterTimeline);
     }, 1000)
     // document.querySelector('.twitter-timeline').setAttribute('data-width', '100%')
     // const aside = document.querySelector('.aside')
