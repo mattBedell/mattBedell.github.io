@@ -76,6 +76,13 @@ input:valid + label {
   color: rgb(41,112,150);
   transform: translateY(-23px);
 }
+/*input:invalid + label {
+  font-size: .8em;
+  left: 0;
+  opacity: 1;
+  color: rgb(41,112,150);
+  transform: translateY(-23px);
+}*/
 textarea:valid + label {
   font-size: .8em;
   left: 0;
