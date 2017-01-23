@@ -18,21 +18,6 @@ class About extends Component {
       }
     })
     setTimeout(() => this.setState({componentOpacity: 1}))
-    // setTimeout(() => {
-    //   this.twitterTimeline = document.querySelector('.twitter-timeline')
-    // }, 1000)
-    // document.querySelector('.twitter-timeline').setAttribute('data-width', '100%')
-    // const aside = document.querySelector('.aside')
-    // aside.addEventListener('transitionend', () => {
-    //   if(this.props.selected === 'about') {
-    //     // aside.style.visibility = 'visible'
-    //     // this.twitter.style.visibility ='visible'
-    //   } else {
-    //     document.querySelector('.about-container').style.visibility = 'hidden'
-    //     // aside.style.visibility = 'hidden'
-    //     // this.twitter.style.visibility ='hidden'
-    //   }
-    // })
   }
   fade(delay) {
     if(this.props.selected === 'about' && this.props.contentToDisplay === 'about') {
