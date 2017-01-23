@@ -62,7 +62,7 @@ class Contact extends Component {
               <label htmlFor="email">Email</label>
             </div>
           </div>
-          <div>
+          <div className="textContainer">
             <textarea id="message" type="text" required onChange={(e) => this.updateField('text', e)}></textarea>
             <label htmlFor="message">Message</label>
           </div>

@@ -42,4 +42,19 @@ form label {
   z-index: 0;
   left: 0px;
   color: gray;
+  transition: .2s;
+}
+input:focus + label {
+  transform: translateY(-17px);
+  color: blue;
+}
+.textContainer textarea:focus + label {
+  transform: translateY(-18px);
+  color: blue;
+}
+.textContainer textarea {
+  outline: none;
+}
+.textContainer {
+  position: relative;
 }
