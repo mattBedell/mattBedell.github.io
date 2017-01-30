@@ -1,9 +1,23 @@
 .project-display {
-  height: 60vh;
+  height: 100%;
   width: 100%;
   background-color: #FAFAFA;
+  padding: 10px;
 }
 .header-img {
-  height: 30%;
-  width: 40%;
+  height: 200px;
+  width: 200px;
+  margin-right: 5%;
+}
+.projImgContainer {
+  display: flex;
+  justify-content: center;
+}
+.project-header {
+  width: 100%;
+  text-align: center;
+}
+.tech-container {
+  width: 100%;
+  height: 100px;
 }

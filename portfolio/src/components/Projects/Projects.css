@@ -1,6 +1,6 @@
 .projects-container {
   width: 100vw;
-  height: 60vh;
+  height: 600px;
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -14,7 +14,7 @@
 .nav {
   margin-bottom: 5px;
   width: 100%;
-  height: 10%;
+  height: 30px;
   transition: opacity .5s;
   opacity: 0;
   position: relative;
@@ -41,5 +41,6 @@
 }
 .projectDisplayContainer {
   opacity: 0;
-  width: 30%;
+  width: 50%;
+  height: 100%;
 }
