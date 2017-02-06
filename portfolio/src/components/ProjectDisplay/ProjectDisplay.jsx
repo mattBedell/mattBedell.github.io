@@ -57,6 +57,17 @@ const ProjectDisplay = (props) =>
     </div>
     <div className="project-header">
       <h3>{content[props.selected].name}</h3>
+      <div className="linkBar">
+        <div className="linkContainer">
+          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"/></svg>
+          <a href={content[props.selected].links[0]} target="_blank">Github</a>
+        </div>
+        <div className="linkContainer">
+          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.414"><path d="M13.74 0H2.26C1.46 0 .82.64.82 1.44v13.12c0 .8.64 1.44 1.44 1.44h11.48c.8 0 1.44-.64 1.44-1.44V1.44c0-.8-.64-1.44-1.44-1.44zm.64 14.56c0 .36-.28.64-.64.64H2.26c-.36 0-.64-.28-.64-.64V1.44c0-.36.28-.64.64-.64h11.48c.36 0 .64.28.64.64v13.12zm-9.96-.96l1.8-1.6-1.8-1.6v3.2zm6.48-6.48c-.32-.32-.92-.72-1.92-.72-1.08 0-2.2.28-3 .56V2.4h-1.6v6.92L5.5 8.8s1.84-.84 3.44-.84c.8 0 1 .44 1 .84v4.8h1.6V8.8c.04-.12.04-1-.64-1.68zM8.78 5h1.6c.72-.84 1.08-1.68 1.2-2.6h-1.6c-.16.92-.56 1.76-1.2 2.6z"/></svg>
+          <a href={content[props.selected].links[1]} target="_blank">Heroku</a>
+
+        </div>
+      </div>
     </div>
     <div className="project-content">
       {content[props.selected].headline}
