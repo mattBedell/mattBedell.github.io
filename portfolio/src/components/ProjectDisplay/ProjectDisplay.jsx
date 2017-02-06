@@ -16,7 +16,7 @@ const content = {
     img: [pacmanImg1, pacmanImg2],
     headline: 'Pacman clone. Eat all the dots to win and avoid the ghosts!',
     body: '',
-    links: [],
+    links: ['https://github.com/mattBedell/Pacman', 'https://mattbedell.github.io/Pacman/'],
     tech: ['Javascript', 'HTML', 'CSS']
   },
   asteroid: {
@@ -24,7 +24,7 @@ const content = {
     img: [asteroidImg1, asteroidImg2],
     headline: 'Displays the relative distances of Near Earth Asteroids in of the current day and in 2016.',
     body: 'Utilizes Nasa\'s NEO API to collect data.  Uses an Express server and a postgreSQL database to store and serve historical data to a React front-end.',
-    links: [],
+    links: ['https://github.com/mattBedell/Asteroid-Tracker', 'https://asteroid-tracker.herokuapp.com/'],
     tech: ['React', 'Node', 'Express', 'postgreSQL', 'Javascript', 'HTML', 'CSS']
   },
   blink: {
@@ -32,7 +32,7 @@ const content = {
     img: [blink1, blink2],
     headline: 'A collaborative group project.  Search for places and attractions and save them to your bucket list.',
     body: 'Utilizes Google\'s places API to allow the user to search for attractions.  Features Google User Auth to allow the user to sign in with their Gmail account. Express server and postgreSQL to manage user accounts and data, served to a React front-end.',
-    links: [],
+    links: ['https://github.com/mattBedell/Blink', 'https://wid-blink.herokuapp.com/'],
     tech: ['React', 'Node', 'Express', 'postgreSQL', 'Javascript', 'HTML', 'CSS']
   },
   twitter: {
@@ -40,7 +40,7 @@ const content = {
     img: [twitter1, twitter2],
     headline: 'Search for tweets and analyze them for emotional content, sentiment, and key concepts.',
     body: 'Utilizes Twitter\'s API and Watson\'s text analysis API. Allows the user to do a general search of all tweets, and to choose which tweets to analyze. The user can then save tweets to their account. Express server and EJS for server-side rendering. PostgreSQL for managing user profiles and saved data.',
-    links: [],
+    links: ['https://github.com/mattBedell/TwitterSearch', 'https://ts-wdi.herokuapp.com/'],
     tech: ['Node', 'Express', 'postgreSQL', 'Javascript', 'HTML', 'CSS']
   }
 }
