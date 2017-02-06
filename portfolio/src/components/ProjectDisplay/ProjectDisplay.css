@@ -20,6 +20,7 @@
 }
 .project-header h3 {
   margin: 10px 0 5px 0;
+  max-height: 20px;
 }
 .tech-container {
   width: 100%;
