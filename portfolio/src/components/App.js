@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super()
     this.state = {
-      selected: 'project',
+      selected: 'about',
       contentToDisplay: 'about'
     }
   }
