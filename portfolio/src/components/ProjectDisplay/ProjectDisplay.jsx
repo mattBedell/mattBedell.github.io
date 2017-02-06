@@ -15,23 +15,25 @@ const content = {
     name: 'Pacman',
     img: [pacmanImg1, pacmanImg2],
     headline: 'Pacman clone. Eat all the dots to win and avoid the ghosts!',
-    body: '',
+    body: `A Pacman-like game made with Javascript, HTML and CSS. Very rudimentary AI and win/loss conditions. Collision detection is buggy due to sprites swapping
+    places on the grid without occupying the same space at once.  Still pretty fun to play though! Use the arrow keys to move Pacman.`,
     links: ['https://github.com/mattBedell/Pacman', 'https://mattbedell.github.io/Pacman/'],
     tech: ['Javascript', 'HTML', 'CSS']
   },
   asteroid: {
     name: 'Asteroid Tracker',
     img: [asteroidImg1, asteroidImg2],
-    headline: 'Displays the relative distances of Near Earth Asteroids in of the current day and in 2016.',
-    body: 'Utilizes Nasa\'s NEO API to collect data.  Uses an Express server and a postgreSQL database to store and serve historical data to a React front-end.',
+    headline: 'Displays the relative distances of Near Earth Asteroids for today\'s current NEOs and for the months of 2016.',
+    body: 'Utilizes Nasa\'s NEO API to collect data.  Uses an Express server and a postgreSQL database to store and serve historical data to a React front-end. All visual displays and animations done in HTML and CSS',
     links: ['https://github.com/mattBedell/Asteroid-Tracker', 'https://asteroid-tracker.herokuapp.com/'],
     tech: ['React', 'Node', 'Express', 'postgreSQL', 'Javascript', 'HTML', 'CSS']
   },
   blink: {
     name: 'Blink',
     img: [blink1, blink2],
-    headline: 'A collaborative group project.  Search for places and attractions and save them to your bucket list.',
-    body: 'Utilizes Google\'s places API to allow the user to search for attractions.  Features Google User Auth to allow the user to sign in with their Gmail account. Express server and postgreSQL to manage user accounts and data, served to a React front-end.',
+    headline: 'Search for places and attractions and save them to your bucket list.',
+    body: `A collaborative group project. Utilizes Google\'s places API to allow the user to search for attractions.  Features Google User Auth to allow the user
+    to sign in with their Gmail account. Express server and postgreSQL to manage user accounts and data, served to a React front-end.`,
     links: ['https://github.com/mattBedell/Blink', 'https://wid-blink.herokuapp.com/'],
     tech: ['React', 'Node', 'Express', 'postgreSQL', 'Javascript', 'HTML', 'CSS']
   },
@@ -39,7 +41,8 @@ const content = {
     name: 'Twitter Search',
     img: [twitter1, twitter2],
     headline: 'Search for tweets and analyze them for emotional content, sentiment, and key concepts.',
-    body: 'Utilizes Twitter\'s API and Watson\'s text analysis API. Allows the user to do a general search of all tweets, and to choose which tweets to analyze. The user can then save tweets to their account. Express server and EJS for server-side rendering. PostgreSQL for managing user profiles and saved data.',
+    body: `Utilizes Twitter\'s API and Watson\'s text analysis API. Allows the user to do a general search of all tweets, and to choose which tweets to analyze.
+    The user can then save tweets to their account. Express server and EJS for server-side rendering. PostgreSQL for managing user profiles and saved data.`,
     links: ['https://github.com/mattBedell/TwitterSearch', 'https://ts-wdi.herokuapp.com/'],
     tech: ['Node', 'Express', 'postgreSQL', 'Javascript', 'HTML', 'CSS']
   }

@@ -58,7 +58,7 @@ class About extends Component {
               <br />
               <br />
               <br />
-              Right now I am honing my skills in React, and am taking
+              Currently honing my skills in React and taking Harvard's CS50 course to bruch up on my CS theory.
               <br />
               <br />
               Check out my most recent app: <a href="https://github.com/mattBedell/Asteroid-Tracker" target="_blank">Asteroid-Tracker</a>
