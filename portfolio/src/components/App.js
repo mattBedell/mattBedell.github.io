@@ -6,6 +6,8 @@ import About from './About/About.jsx'
 import Projects from './Projects/Projects.jsx'
 import Contact from './Contact/Contact.jsx'
 
+// DO: REMOVE EVENT LISTENERS ON SECTION DISMOUNT
+
 class App extends Component {
   constructor(props) {
     super()

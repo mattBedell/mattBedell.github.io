@@ -5,19 +5,26 @@ class TechList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      fadeIn: true,
+      propTransition: false,
       componentOpacity: 0,
-      techList: this.props.techList,
-      transitionSpeed: '1.5s'
+      techList: this.props.techList
     }
   }
   generateTechbox() {
-    return(this.state.techList.map((tech, i) => {
-      return (<div className="techBox" style={this.fade(.2 + i/10)} key={`tb${i}`}>{tech}</div>)
+    let transitionSpeed = 'opacity 1.5s';
+    if(this.state.propTransition) {
+      transitionSpeed = 'opacity 0s'
+    } else {
+      transitionSpeed = 'opacity 1.5s'
+    }
+    return(this.props.techList.map((tech, i) => {
+      let transitionDelay = .2 + i/10;
+      return (<div className="techBox" style={{'transition': `${transitionSpeed}`, 'opacity': `${this.state.componentOpacity}`, 'transitionDelay': `${transitionDelay}s`}} key={`tb${i}`}>{tech}</div>)
     }))
   }
-  fade(delay) {
-    return {'opacity': `${this.state.componentOpacity}`, 'transitionDelay': `${delay}s`, 'transition': `${this.state.transitionSpeed}`}
+  fade(delay, speed) {
+    console.log(delay, speed);
+    return {'transition': `${speed}`, 'opacity': `${this.state.componentOpacity}`, 'transitionDelay': `${delay}s`}
   }
   componentDidMount() {
     setTimeout(() => {
@@ -27,17 +34,18 @@ class TechList extends Component {
     })
   }
   componentWillReceiveProps(nextProps) {
-    if(this.state.techList !== nextProps.techList) {
+    if(this.props.techList !== nextProps.techList) {
       this.setState({
-        techList: nextProps.techList,
+        propTransition: true,
         componentOpacity: 0
       })
+      setTimeout(() => {
+        this.setState({
+          propTransition: false,
+          componentOpacity: 1
+        })
+      }, 300)
     }
-    setTimeout(() => {
-      this.setState({
-        componentOpacity: 1
-      })
-    })
   }
   render() {
     return (
