@@ -35,7 +35,7 @@ class About extends Component {
             <div className="header" style={this.fade(.1)}>
               <div className="headshot"></div>
               <div className="headline">
-                <h3>I'm a learner that is also a developer</h3>
+                <h3>Learner. Developer. Champion.</h3>
               </div>
               <div className="linkBar">
                 <div className="linkContainer">
@@ -58,7 +58,7 @@ class About extends Component {
               <br />
               <br />
               <br />
-              Currently honing my skills in React and taking Harvard's CS50 course to bruch up on my CS theory.
+              Currently honing my skills in React and taking Harvard's CS50 course to brushing up on my CS theory.
               <br />
               <br />
               Check out my most recent app: <a href="https://github.com/mattBedell/Asteroid-Tracker" target="_blank">Asteroid-Tracker</a>

@@ -35,6 +35,10 @@
 .headline {
   height: 75px;
   font-size: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
 svg {
   height: 16px;
