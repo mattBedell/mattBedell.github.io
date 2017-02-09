@@ -1,4 +1,8 @@
+body {
+  overflow: hidden;
+}
 .about-container {
+  position: relative;
   margin-top: 3vh;
   width: 100vw;
   display: flex;
@@ -34,7 +38,7 @@
 }
 .headline {
   height: 75px;
-  font-size: 1.2vw;
+  font-size: .8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,3 +102,75 @@ svg {
 #twitter-widget-0 {
   transition: .5s;
 }
+@media (max-width: 55em) {
+  .header {
+    height: 67px;
+  }
+  .headshot {
+    height: 50px;
+    width: 50px;
+  }
+  .headline {
+    height: 50px;
+  }
+  .content {
+    padding: 10px;
+  }
+}
+@media (max-width: 46em) {
+  .aside {
+  display: none;
+  }
+  .main {
+    width: 50vh;
+  }
+  .content {
+    height: 300px;
+  }
+}
+@media (max-height: 40em) {
+  .headshot {
+    display: none;
+  }
+  .headline {
+    display: none;
+  }
+  .header {
+    height: 20px;
+    padding: 1px;
+  }
+  .linkBar {
+    height: 100%;
+    padding: 1px;
+  }
+}
+@media (max-height: 36em) {
+  .content {
+    font-size: 1.05em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
