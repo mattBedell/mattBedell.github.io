@@ -35,7 +35,7 @@ class About extends Component {
             <div className="header" style={this.fade(.1)}>
               <div className="headshot"></div>
               <div className="headline">
-                <h3>Learner. Developer. Champion.</h3>
+                <h3>Matt Bedell. Web Developer.</h3>
               </div>
               <div className="linkBar">
                 <div className="linkContainer">
@@ -64,15 +64,6 @@ class About extends Component {
               Check out my most recent app: <a href="https://github.com/mattBedell/Asteroid-Tracker" target="_blank">Asteroid-Tracker</a>
             </div>
             <div className="skills" style={this.fade(.2)}>
-              {/* <div className="skillBox">React.js</div>
-              <div className="skillBox">Node.js</div>
-              <div className="skillBox">Express.js</div>
-              <div className="skillBox">PostgreSQL</div>
-              <div className="skillBox">Javascript</div>
-              <div className="skillBox">jQuery</div>
-              <div className="skillBox">GIT</div>
-              <div className="skillBox">HTML5</div>
-              <div className="skillBox">CSS</div> */}
               <TechList
                 techList={this.state.techList}
               />
