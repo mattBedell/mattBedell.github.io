@@ -1,6 +1,3 @@
-body {
-  overflow: hidden;
-}
 .about-container {
   position: relative;
   margin-top: 3vh;
@@ -19,6 +16,7 @@ body {
   background-color: #FAFAFA;
   opacity: 0;
   transition: .5s;
+  overflow: hidden;
 }
 .header {
   width: 100%;
@@ -103,7 +101,12 @@ svg {
 #twitter-widget-0 {
   transition: .5s;
 }
-@media (max-width: 55em) {
+@media (max-width: 1110px) {
+  .headline {
+    font-size: .8em;
+  }
+}
+@media (max-width: 880px) {
   .header {
     height: 67px;
   }
@@ -117,8 +120,11 @@ svg {
   .content {
     padding: 10px;
   }
+  .aside {
+    height: 565px;
+  }
 }
-@media (max-width: 46em) {
+@media (max-width: 772px) {
   .aside {
   display: none;
   }
@@ -129,7 +135,7 @@ svg {
     height: 300px;
   }
 }
-@media (max-height: 40em) {
+@media (max-height: 42em) {
   .headshot {
     display: none;
   }
@@ -144,13 +150,13 @@ svg {
     height: 100%;
     padding: 1px;
   }
-}
-@media (max-height: 36em) {
   .content {
     font-size: 1.05em;
   }
+  .aside {
+    height: 520px;
+  }
 }
-
 
 
 

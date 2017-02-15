@@ -63,13 +63,13 @@ class About extends Component {
               <br />
               Check out my most recent app: <a href="https://github.com/mattBedell/Asteroid-Tracker" target="_blank">Asteroid-Tracker</a>
             </div>
-            <div className="skills" style={this.fade(.2)}>
+            <div className="lastOut skills" style={this.fade(.2)}>
               <TechList
                 techList={this.state.techList}
               />
             </div>
           </div>
-          <div className="lastOut aside" style={this.fade(.3)}>
+          <div className="aside" style={this.fade(.3)}>
             <Timeline
               dataSource={{
                 sourceType: 'profile',
