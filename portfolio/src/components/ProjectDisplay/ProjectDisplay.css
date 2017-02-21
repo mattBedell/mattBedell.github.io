@@ -7,9 +7,10 @@
 .header-img {
   height: 200px;
   width: 200px;
-  margin-right: 5%;
+  margin: 0 10px 0 10px;
 }
 .projImgContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -31,3 +32,49 @@
   padding: 30px;
   height: 230px;
 }
+@media (max-width: 1170px) {
+  .project-content {
+    font-size: 1em;
+  }
+}
+@media (max-width: 670px) {
+  .project-display {
+    height: 420px;
+  }
+  .tech-container {
+    display: none;
+  }
+  .header-img {
+    height: 150px;
+    width: 150px;
+  }
+  .project-content {
+    padding: 10px;
+    font-size: .9em;
+  }
+}
+/* iPhone 5 Retina regardless of IOS version */
+@media (device-height : 568px)
+   and (device-width : 320px)
+   and (-webkit-min-device-pixel-ratio: 2) {
+     .header-img {
+       height: 100px;
+       width: 100px;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
