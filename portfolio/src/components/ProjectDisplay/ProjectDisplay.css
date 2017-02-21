@@ -54,6 +54,7 @@
   }
 }
 /* iPhone 5 Retina regardless of IOS version */
+/*http://stackoverflow.com/questions/12539697/iphone-5-css-media-query*/
 @media (device-height : 568px)
    and (device-width : 320px)
    and (-webkit-min-device-pixel-ratio: 2) {
