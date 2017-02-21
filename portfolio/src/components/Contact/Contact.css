@@ -76,13 +76,6 @@ input:valid + label {
   color: rgb(41,112,150);
   transform: translateY(-23px);
 }
-/*input:invalid + label {
-  font-size: .8em;
-  left: 0;
-  opacity: 1;
-  color: rgb(41,112,150);
-  transform: translateY(-23px);
-}*/
 textarea:valid + label {
   font-size: .8em;
   left: 0;
@@ -118,6 +111,9 @@ button {
   width: 100%;
   position: relative;
   font-size: 1.5em;
+}
+.sendConfirm {
+  text-align: center;
 }
 .progressBar {
   background-color: rgb(245,250,252);
@@ -163,5 +159,15 @@ button {
   100% {
     opacity: 0;
     transform: translateX(110px);
+  }
+}
+@media (max-width: 950px) {
+  .contact {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .contact {
+    width: 300px;
   }
 }
